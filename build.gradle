@@ -1,0 +1,54 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:7.0.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.20"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:2.3.2"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    libVersions = [
+            ktxCore                   : '1.6.0',
+            appcompat                 : '1.3.1',
+            material                  : '1.4.0',
+            materialIo                : '1.4.0',
+            constraintlayout          : '2.1.0',
+            retrofit2                 : '2.9.0',
+            Glide                     : "4.12.0",
+            retrofit2CoroutinesAdapter: "0.9.2",
+            okhttp3                   : "5.0.0-alpha.2",
+            alerter                   : "7.2.1",
+            Gson                      : "gson:2.8.6",
+            retrofitGsonConverter     : '2.9.0',
+            swipRefresh               : "1.1.0",
+            mokito                    : "2.25.0",
+            androidXTestCoreVersion   : "1.3.0",
+            androidXTestExtKotlinRunnerVersion : "1.1.2",
+            hamcrestVersion           : '1.3',
+            archTestingVersion        : '2.1.0',
+            androidLifeCircle         : '2.3.1',
+            robolectricVersion        : '4.5.1',
+            junit                     : '1.1.3',
+            espresso                  : '3.4.0',
+            truth                     : '1.1.3',
+            mockito                   : '3.2.0',
+            arch                      : '2.1.0',
+            coroutinesTest            : '1.3.4',
+            mockwebserver             : '5.0.0-alpha.2',
+            databinding               : '3.0.0'
+    ]
+}

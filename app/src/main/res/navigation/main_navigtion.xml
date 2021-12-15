@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_navigtion"
+    app:startDestination="@id/mainCaseFragement">
+
+    <fragment
+        android:id="@+id/mainCaseFragement"
+        android:name="com.example.wikitest.view.fragment.MainCaseFragement"
+        android:label="MainCaseFragement" >
+        <action
+            android:id="@+id/action_mainCaseFragement_to_caseDetailFragment2"
+            app:destination="@id/caseDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/caseDetailFragment2"
+        android:name="com.example.wikitest.view.fragment.CaseDetailFragment"
+        android:label="CaseDetailFragment" >
+        <action
+            android:id="@+id/action_caseDetailFragment2_to_mainCaseFragement"
+            app:destination="@id/mainCaseFragement" />
+        <action
+            android:id="@+id/action_caseDetailFragment2_self"
+            app:destination="@id/caseDetailFragment2" />
+    </fragment>
+</navigation>
